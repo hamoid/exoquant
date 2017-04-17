@@ -60,7 +60,7 @@ typedef double exq_float;
 
 typedef struct _exq_color
 {
-	exq_float r, g, b, a;
+	exq_float r, g, b;
 } exq_color;
 
 typedef struct _exq_histogram
@@ -95,13 +95,11 @@ typedef struct _exq_data
 	int						numColors;
 	int						numBitsPerChannel;
 	int						optimized;
-	int						transparency;
 } exq_data;
 
 /* interface */
 
 exq_data			*exq_init();
-void				exq_no_transparency(exq_data *pExq);
 void				exq_free(exq_data *pExq);
 void				exq_feed(exq_data *pExq, unsigned char *pData,
 							 int nPixels);
@@ -138,7 +136,6 @@ void				exq_sort(exq_histogram **ppHist,
 exq_float			exq_sort_by_r(const exq_histogram *pHist);
 exq_float			exq_sort_by_g(const exq_histogram *pHist);
 exq_float			exq_sort_by_b(const exq_histogram *pHist);
-exq_float			exq_sort_by_a(const exq_histogram *pHist);
 exq_float			exq_sort_by_dir(const exq_histogram *pHist);
 
 extern exq_color	exq_sort_dir;

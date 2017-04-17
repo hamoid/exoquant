@@ -3,7 +3,7 @@
 ExoQuant is a high-quality, easy to use color quantization library. This is for you if you need one or more of the following:
 
 * Very high-quality color reduction
-* Reduction of images including alpha
+* Reduction of images including alpha (NOTE: no alpha in this fork)
 * Creation of a shared palette for more than one image (or mipmap level)
 * Dithering of the reduced image with very little noise
 
